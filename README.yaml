@@ -28,7 +28,7 @@
         At the top of your `Makefile` add, the following...
 
         ```make
-        -include $(shell curl -sSL -o .fr-harness "https://git.io/fr-harness"; echo .fr-harness)
+        -include $(shell curl -sSL -o .fr-harness "https://raw.githubusercontent.com/FitRankings/fr-harness/master/templates/Makefile.fr-harness?token=AECXTXGG7XNNZ5I56FWTYB26HNQPM"; echo .fr-harness)
         ```
 
         This will download a `Makefile` called `.fr-harness` and include it at run-time. We recommend adding the `.fr-harness` file to your `.gitignore`.
