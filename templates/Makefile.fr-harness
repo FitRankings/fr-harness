@@ -1,0 +1,19 @@
+export SHELL = /bin/bash
+export HARNESS_ORG ?= fitrankings
+export HARNESS_PROJECT ?= fr-harness
+export HARNESS_BRANCH ?= master
+export HARNESS_PATH ?= $(shell until [ -d "$(HARNESS_PROJECT)" ] || [ "`pwd`" == '/' ]; do cd ..; done; pwd)/$(HARNESS_PROJECT)
+-include $(HARNESS_PATH)/Makefile
+
+.PHONY : init
+## Init build-harness
+init::
+	@curl --retry 5 --fail --silent --retry-delay 1 https://raw.githubusercontent.com/$(HARNESS_ORG)/$(HARNESS_PROJECT)/$(HARNESS_BRANCH)/bin/install.sh | \
+		bash -s "$(HARNESS_ORG)" "$(HARNESS_PROJECT)" "$(HARNESS_BRANCH)"
+
+.PHONY : clean
+## Clean build-harness
+clean::
+	@[ "$(HARNESS_PATH)" == '/' ] || \
+	 [ "$(HARNESS_PATH)" == '.' ] || \
+	   echo rm -rf $(HARNESS_PATH)
