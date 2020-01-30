@@ -1,0 +1,46 @@
+---
+    # 
+    # This is the canonical configuration for the `README.md`
+    # Run `make readme` to rebuild the `README.md`
+    #
+    
+    # Name of this project
+    name: FR Harness
+    
+    # Logo for this project
+    logo: docs/logo.png
+    
+    # Copyrights
+    copyrights:
+        - name: "FitRankings"
+          url: "https://fitrankings.com"
+          year: "2020"
+    
+    # Canonical GitHub repo 
+    github_repo: https://github.com/fitrankings/fr-harness
+    
+    # Short description of this project
+    description: |-
+        This harness is a collection of Makefiles to facilitate building applications, infrastructure, documentation, and more.
+    
+    # How to use this project
+    usage: |-
+        At the top of your `Makefile` add, the following...
+
+        ```make
+        -include $(shell curl -sSL -o .fr-harness "https://git.io/fr-harness"; echo .fr-harness)
+        ```
+
+        This will download a `Makefile` called `.fr-harness` and include it at run-time. We recommend adding the `.fr-harness` file to your `.gitignore`.
+        
+        This automatically exposes many new targets that you can leverage throughout your build & CI/CD process.
+        
+        Run `make help` for a list of available targets.
+        
+        **NOTE:** the `/` is interchangable with the `:` in target names
+      
+    # How to get started quickly
+    quickstart: |-
+        Here's how to get started...
+        1. `git clone https://github.com/fitrankings/fr-farness.git` to pull down the repository
+    

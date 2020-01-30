@@ -1,0 +1,41 @@
+---
+    # 
+    # This is the canonical configuration for the `README.md`
+    # Run `make readme` to rebuild the `README.md`
+    #
+    
+    # Name of this project
+    name: FitRankings Core
+    
+    # Logo for this project
+    logo: docs/logo.png
+    
+    # Copyrights
+    copyrights:
+        - name: "FitRankings"
+          url: "https://fitrankings.com"
+          year: "2020"
+    
+    # Canonical GitHub repo 
+    github_repo: https://github.com/fitrankings/fitrankings-core
+    
+    # badges:
+    #     -
+
+    # Short description of this project
+    description: |-
+        This is a description.
+    # Introduction to the project
+    introduction: |-
+        This is an introduction.
+    
+    # How to use this project
+    # usage: |-
+      
+    # How to get started quickly
+    quickstart: |-
+        Here's how to get started...
+        1. `git clone https://github.com/fitrankings/fitrankings-core.git` to pull down the repository
+    # # Other files to include in this README from the project folder
+    # include:
+    #   - 

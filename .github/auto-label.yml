@@ -1,0 +1,8 @@
+modules/aws: modules/aws/**
+modules/bash: modules/bash/**
+modules/compose: modules/compose/**
+modules/docker: modules/docker/**
+modules/env: modules/env/**
+modules/make: modules/make/**
+modules/readme: modules/readme/**
+modules/terraform: modules/terraform/**
